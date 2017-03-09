@@ -337,10 +337,10 @@
 			  	       	  	//callback传值
 			  	       	  	var callValue = $this.attr("data-string");
 			  	       	  	if(typeof setting.callback == 'string'){
-			  	       	  		eval("window."+setting.callback+"(callValue)");//this的指向
+			  	       	  		eval("window."+setting.callback+"($input)");//this的指向
 			  	       	  		return;
 			  	       	  	}
-			  	       	  	setting.callback(callValue);
+			  	       	  	setting.callback($input);
 			  	       	}
 		  	       	},
 		  	        getPosition:function($input){
